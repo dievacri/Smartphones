@@ -1,0 +1,5 @@
+@mixin notification_container() {
+  cursor: pointer;
+  color: $tertiary;
+  width: 1.875rem;
+}
