@@ -22,6 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+ {*
 <div class="images-container">
   {block name='product_cover'}
     <div class="product-cover">
@@ -52,5 +53,25 @@
       </ul>
     </div>
   {/block}
+</div>
+*}
+<div class="sp-product-images">
+  {foreach from=$product.images item=image}
+    <div class="sp-product-images-image">        
+        <img
+              class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if}"
+              data-image-medium-src="{$image.bySize.medium_default.url}"
+              data-image-large-src="{$image.bySize.large_default.url}"
+              src="{$image.bySize.home_default.url}"
+              alt="{$image.legend}"
+              title="{$image.legend}"
+              width="100"
+              itemprop="image"
+            >
+    </div>    
+  {/foreach}
+</div>
+<div class="sp-product-main-image">
+  <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">  
 </div>
 {hook h='displayAfterProductThumbs'}

@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
+{*
 <div id="block_myaccount_infos" class="col-md-2 links wrapper">
   <h3 class="myaccount-title hidden-sm-down">
     <a class="text-uppercase" href="{$urls.pages.my_account}" rel="nofollow">
@@ -48,4 +48,16 @@
     {/foreach}
     {hook h='displayMyAccountBlock'}
 	</ul>
+</div>*}
+<div class="sp-footer-category">
+    <div class="sp-footer-category-title">{l s='Your account' d='Shop.Theme.Customeraccount'}</div>
+    <div class="sp-footer-category-items">
+      {foreach from=$my_account_urls item=my_account_url}
+        <div class="sp-footer-category-item">
+          <a href="{$my_account_url.url}" title="{$my_account_url.title}" rel="nofollow">
+            {$my_account_url.title}
+          </a>  
+        </div>
+      {/foreach}
+    </div>
 </div>

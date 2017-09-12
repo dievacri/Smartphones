@@ -22,7 +22,37 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
+<form action="{$urls.pages.index}#footer" method="post">
+  <div class="sp-mailing">
+      <div class="sp-mailing-title">
+          {l s='Get our latest news and special sales' d='Shop.Theme.Global'}
+      </div>
+      {if $conditions}
+        <div class="sp-mailing-description">
+            {$conditions}
+        </div>
+      {/if}
+      <div class="sp-mailing-action">
+          <div class="sp-mailing-input">
+              <input type="text">
+          </div>
+          <div class="sp-mailing-button">
+              <button
+              name="submitNewsletter"
+              type="submit"
+            >
+              {l s='Subscribe' d='Shop.Theme.Actions'}
+            </button>
+          </div>
+      </div>
+      {if $msg}
+        <p class="alert {if $nw_error}alert-danger{else}alert-success{/if}">
+          {$msg}
+        </p>
+      {/if}
+  </div>
+</form>
+{*
 <div class="block_newsletter col-lg-8 col-md-12 col-sm-12">
   <div class="row">
     <p id="block-newsletter-label" class="col-md-5 col-xs-12">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
@@ -69,3 +99,4 @@
     </div>
   </div>
 </div>
+*}

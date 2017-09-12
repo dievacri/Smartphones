@@ -22,6 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+ {*
 <div class="product-add-to-cart">
   {if !$configuration.is_catalog}
     <span class="control-label">{l s='Quantity' d='Shop.Theme.Catalog'}</span>
@@ -83,4 +84,52 @@
       </p>
     {/block}
   {/if}
+</div>*}
+{*New Desing*}
+<div class="sp-product-about-detail-quantity">
+    <div class="sp-product-about-detail-title">Cantidad:</div>
+    <div class="sp-product-about-detail-description">        
+        <input
+            type="number"
+            name="qty"
+            id="quantity_wanted"
+            value="{$product.quantity_wanted}"            
+            min="{$product.minimal_quantity}"            
+          >
+    </div>
 </div>
+<div class="sp-product-about-add-to-cart">
+    <button data-button-action="add-to-cart"
+            type="submit"
+            {if !$product.add_to_cart_url}
+              disabled
+            {/if}>
+        <img src="/img/v2/sp-basket.png" class="sp-product-about-add-to-cart-basket">
+        Añadir a mi carrito
+    </button>
+</div>
+{block name='product_availability'}
+      <span id="product-availability">
+        {if $product.show_availability && $product.availability_message}
+          {if $product.availability == 'available'}
+            <i class="material-icons product-available">&#xE5CA;</i>
+          {elseif $product.availability == 'last_remaining_items'}
+            <i class="material-icons product-last-items">&#xE002;</i>
+          {else}
+            <i class="material-icons product-unavailable">&#xE14B;</i>
+          {/if}
+          {$product.availability_message}
+        {/if}
+      </span>
+    {/block}
+{block name='product_minimal_quantity'}
+  <p class="product-minimal-quantity">
+    {if $product.minimal_quantity > 1}
+      {l
+      s='The minimum purchase order quantity for the product is %quantity%.'
+      d='Shop.Theme.Checkout'
+      sprintf=['%quantity%' => $product.minimal_quantity]
+      }
+    {/if}
+  </p>
+{/block}

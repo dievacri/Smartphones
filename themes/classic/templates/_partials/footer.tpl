@@ -22,13 +22,15 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="container">
+
+<div class="">
   <div class="row">
     {block name='hook_footer_before'}
       {hook h='displayFooterBefore'}
     {/block}
   </div>
 </div>
+{*
 <div class="footer-container">
   <div class="container">
     <div class="row">
@@ -52,5 +54,28 @@
         </p>
       </div>
     </div>
+  </div>  
+</div>*}
+<div class="sp-footer">
+  <div class="sp-footer-top">
+    <div class="sp-footer-business">
+          <div class="sp-footer-business-logo">
+            <img src="/img/v2/sp-logo.png" alt="">
+        </div>
+    </div>
+    {block name='hook_footer'}
+      {hook h='displayFooter'}
+    {/block}
+  </div>
+  <div>
+    {block name='hook_footer_after'}
+      {hook h='displayFooterAfter'}
+    {/block}
+  </div>
+  <div class="sp-footer-bottom">
+    <div class="sp-footer-copyright">
+        @ Smartphones Perú
+    </div>
+    <div class="sp-footer-social-networks"></div>
   </div>
 </div>

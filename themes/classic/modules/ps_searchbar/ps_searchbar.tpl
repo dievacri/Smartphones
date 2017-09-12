@@ -35,15 +35,15 @@
 	</form>
 </div>
 -->
-<div data-search-controller-url="{$search_controller_url}">
+<div data-search-controller-url="{$search_controller_url}">    
   <form method="get" action="{$search_controller_url}">
-    <input type="hidden" name="controller" value="search">
-    <div class="sp-search-input">
-        <input type="text" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
-    </div>
-    <div class="sp-search-button">
-        <button type="submit">Buscar</button>
-    </div>
+      <input type="hidden" name="controller" value="search">
+      <div class="sp-search-input">
+          <input type="text" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
+      </div>
+      <div class="sp-search-button">
+          <button type="submit">Buscar</button>
+      </div>
   </form>
 </div>
 <!-- /Block search module TOP -->

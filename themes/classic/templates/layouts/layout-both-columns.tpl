@@ -37,16 +37,16 @@
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
 
-    <main>
+    <div class="sp-container">
       {block name='product_activation'}
         {include file='catalog/_partials/product-activation.tpl'}
       {/block}
 
-      <header id="header">
+      
         {block name='header'}
           {include file='_partials/header.tpl'}
         {/block}
-      </header>
+      
 
       {block name='notifications'}
         {include file='_partials/notifications.tpl'}
@@ -98,7 +98,7 @@
         {/block}
       </footer>
 
-    </main>
+    </div>
 
     {block name='javascript_bottom'}
       {include file="_partials/javascript.tpl" javascript=$javascript.bottom}

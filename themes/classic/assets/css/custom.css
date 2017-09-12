@@ -122,8 +122,8 @@ div.sp-container {
 .sp-header .sp-top-right .sp-cart-container img {
   width: 34px;
   height: 31px;
-  margin-top: 6px;
-  margin-right: 3px;
+    margin-top: 6px;
+    margin-right: 3px;
 }
 
 .sp-categories {
@@ -367,15 +367,15 @@ div.sp-container {
 }
 
 .sp-promotions .sp-promotions-slider .sp-promotions-slide.slide-1 .sp-promotions-slide-description {
-  background: #343A40;
+  background: #343A40; 
 }
 
 .sp-promotions .sp-promotions-slider .sp-promotions-slide.slide-2 .sp-promotions-slide-description {
-  background: #8774D3;
+  background: #8774D3; 
 }
 
 .sp-promotions .sp-promotions-slider .sp-promotions-slide.slide-3 .sp-promotions-slide-description {
-  background: #9BBD00;
+  background: #9BBD00; 
 }
 
 .sp-promotions .sp-promotions-slider .sp-promotions-slide .sp-promotions-slide-description .sp-promotions-slide-name {
@@ -570,7 +570,7 @@ div.sp-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
+} 
 
 .sp-footer .sp-footer-top {
   display: flex;
@@ -600,7 +600,7 @@ div.sp-container {
 
 }
 
-.sp-footer .sp-footer-top .sp-footer-category .sp-footer-category-title {
+.sp-footer .sp-footer-top .sp-footer-category .sp-footer-category-title { 
   font-size: 20px;
   color: #343A40;
   margin-bottom: 16px;
@@ -620,5 +620,217 @@ div.sp-container {
 .sp-footer .sp-footer-bottom .sp-footer-copyright {
   font-weight: 300;
   font-size: 20px;
+  color: #868E96;
+}
+
+.sp-breadcrumb {
+  display: flex;
+  padding: 0px 32px;
+  font-weight: 300;
+  font-size: 22px;
+  color: #767779;
+}
+
+.sp-breadcrumb .sp-breadcrumb-item {
+  display: flex;
+  padding: 0 18px;
+  border-right: 1px solid #636363;
+}
+
+.sp-breadcrumb .sp-breadcrumb-item > span {
+  cursor: pointer;
+}
+
+.sp-breadcrumb .sp-breadcrumb-item:last-child {
+  border-right: none;
+}
+
+.sp-breadcrumb .sp-breadcrumb-item:first-child {
+  padding-left: 0px;
+}
+
+.sp-content {
+  
+}
+
+.sp-content .sp-product-detail {
+  display: flex;
+  flex-direction: row;
+  /*padding: 24px 0px;*/
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.sp-content .sp-product-detail .sp-product-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-content .sp-product-detail .sp-product-images .sp-product-images-image {
+  display: flex;
+  width: 168px;
+  height: 168px;
+  margin: 8px 0px;
+  border: 1px solid #C6C6C6;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sp-content .sp-product-detail .sp-product-images .sp-product-images-image > img {
+  width: 112px;
+  height: 161px;
+}
+
+.sp-content .sp-product-detail .sp-product-main-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 467px;
+  margin: 8px 0;
+  height: 608px;
+  border: 1px solid #CFCDCD;
+}
+
+.sp-content .sp-product-detail .sp-product-main-image > img {
+  width: 279px;
+  height: 558px;
+}
+
+.sp-content .sp-product-about {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.sp-content .sp-product-about .sp-product-about-title {
+  font-size: 48px;
+  color: #767779;
+}
+
+.sp-content .sp-product-about .sp-product-about-subtitle {
+  font-size: 34px;
+  color: #767779;
+  font-weight: 300;
+}
+
+.sp-content .sp-product-about .sp-product-about-detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.sp-content .sp-product-about .sp-product-about-detail > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sp-content .sp-product-about .sp-product-about-detail .sp-product-about-detail-price .sp-product-about-detail-description {
+  color: #EF0925 !important;
+  font-weight: 400;
+}
+
+.sp-content .sp-product-about .sp-product-about-detail .sp-product-about-detail-title {
+  font-size: 24px;
+  color: #767779;
+  width: 140px;
+}
+
+.sp-content .sp-product-about .sp-product-about-detail .sp-product-about-detail-description {
+  font-size: 22px;
+  color: #767779;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
+
+.sp-content .sp-product-about .sp-product-about-detail .sp-product-about-detail-description > input {
+  width: 100px;
+  font-size: 24px;
+  color: #767779;
+  font-weight: 300 !important; 
+  background: #F2F2F2;
+  height: 42px;
+  border: 1px solid #D8D7D7;
+  text-indent: 8px;
+  border-radius: 8px;
+}
+
+.sp-content .sp-product-about .sp-product-about-detail .sp-product-about-detail-description > input[type=number]::-webkit-inner-spin-button, 
+.sp-content .sp-product-about .sp-product-about-detail .sp-product-about-detail-description > input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+.sp-content .sp-product-about .sp-product-about-add-to-cart {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.sp-content .sp-product-about .sp-product-about-add-to-cart button {
+  width: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 51px;
+  background: #E7A900;
+  border-radius: 4px 4px 4px 0 4px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  font-size: 20px;
+  border: none;
+  color: #FFFFFF;
+}
+
+.sp-content .sp-product-about .sp-product-about-add-to-cart .sp-product-about-add-to-cart-basket {
+  width: 33px;
+  height: 30px;
+  margin-right: 8px;
+} 
+
+.sp-content .sp-product-description {
+  background: #FAFAFA;
+  padding: 32px;
+}
+
+.sp-content .sp-product-description .sp-product-description-headers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.sp-content .sp-product-description .sp-product-description-headers .sp-product-description-headers-item.selected {
+  font-size: 24px;
+  color: #9BBD00;
+  font-weight: 400 !important; 
+  border-bottom: 3px solid #9BBD00;
+}
+
+.sp-content .sp-product-description .sp-product-description-headers .sp-product-description-headers-item {
+  font-size: 24px;
+  color: #8C8D8F;
+  font-weight: 300;
+}
+
+.sp-content .sp-product-description .sp-product-description-headers .sp-product-description-headers-item > span {
+  cursor: pointer;
+}
+
+.sp-content .sp-product-description .sp-product-description-content {
+  font-size: 24px;
+  color: #8C8D8F;
+  line-height: 150%;
+  font-weight: 300;
+}
+.sp-footer .sp-footer-top .sp-footer-category .sp-footer-category-items .sp-footer-category-item a{
   color: #868E96;
 }

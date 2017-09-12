@@ -22,6 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+ {*
 <div class="col-md-4 links">
   <div class="row">
   {foreach $linkBlocks as $linkBlock}
@@ -55,4 +56,22 @@
     </div>
   {/foreach}
   </div>
-</div>
+</div>*}
+
+{foreach $linkBlocks as $linkBlock}
+  <div class="sp-footer-category">
+      <div class="sp-footer-category-title">{$linkBlock.title}</div>
+      <div class="sp-footer-category-items">
+        {foreach $linkBlock.links as $link}
+          <div class="sp-footer-category-item">
+          <a id="{$link.id}-{$linkBlock.id}"
+              href="{$link.url}"
+              title="{$link.description}"
+              {if !empty($link.target)} target="{$link.target}" {/if}>
+              {$link.title}
+          </a>
+          </div>
+        {/foreach}
+      </div>
+  </div>
+{/foreach}

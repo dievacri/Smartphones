@@ -22,7 +22,9 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
 {if $product.show_price}
+{*
   <div class="product-prices">
     {block name='product_discount'}
       {if $product.has_discount}
@@ -96,5 +98,21 @@
       {hook h='displayProductPriceBlock' product=$product type="price"}
       {hook h='displayProductPriceBlock' product=$product type="after_price"}
     </div>
+  </div>*}
+  {*New Design*}
+  <div class="sp-product-about-detail-ex-price">
+    {block name='product_discount'}
+      {if $product.has_discount}
+      <div class="sp-product-about-detail-title">Antes:</div>
+      {hook h='displayProductPriceBlock' product=$product type="old_price"}
+      <div class="sp-product-about-detail-description">{$product.regular_price}</div>        
+      {/if}
+    {/block}      
+  </div>
+  <div class="sp-product-about-detail-price">
+      <div class="sp-product-about-detail-title">Precio:</div>
+      <div class="sp-product-about-detail-description" itemprop="offers"
+        itemscope
+        itemtype="https://schema.org/Offer">{$product.price}</div>        
   </div>
 {/if}
