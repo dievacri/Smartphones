@@ -42,7 +42,7 @@ div.sp-container {
   font-size: 18px;
   color: #868E96;
   min-width: 376px;
-  height: 42px;
+  height: 46px;
 }
 
 .sp-header .sp-search-bar .sp-search-input input::-webkit-input-placeholder, {
@@ -53,7 +53,7 @@ div.sp-container {
 .sp-header .sp-search-bar .sp-search-button button {
   background: #9CBD00;
   border-radius: 4px;
-  font-weight: 300;
+  /*font-weight: 300;*/
   font-size: 18px;
   border: none;
   width: 157px;
@@ -76,7 +76,7 @@ div.sp-container {
   border: 1px solid #F27C2F;
   font-size: 18px;
   border-radius: 4px;
-  height: 44px;
+  height: 46px;
   width: 178px;
   justify-content: center;
   align-items: center;
@@ -136,6 +136,7 @@ div.sp-container {
 .sp-categories .sp-category {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   justify-content: center;
   flex-grow: 1;
   align-items: center;
@@ -228,7 +229,7 @@ div.sp-container {
 }
 
 .sp-call-to-actions {
-  height: 71px;
+  height: 98px;
   background: #323D43;
   display: flex;
   flex-direction: row;
@@ -239,6 +240,7 @@ div.sp-container {
 .sp-call-to-actions .sp-cta {
   display: flex;
   flex-direction: row;
+  width: 25%;
   justify-content: center;
   flex-grow: 1;
   align-items: center;
@@ -274,7 +276,7 @@ div.sp-container {
   font-size: 18px;
   color: #FFFFFF;
   font-weight: 300;
-  width: 45%;
+  width: 70%;
   margin-left: 24px;
 }
 
@@ -833,4 +835,43 @@ div.sp-container {
 }
 .sp-footer .sp-footer-top .sp-footer-category .sp-footer-category-items .sp-footer-category-item a{
   color: #868E96;
+}
+
+#wrapper {
+  box-shadow: none; 
+  padding-top: 0px;
+}
+
+.carousel {
+    box-shadow: none;
+    margin-bottom: 0px;
+}
+
+.sp-slider .carousel-inner {
+  margin-bottom: 0px;
+  height: 526px;
+  width: 100%;
+}
+
+.sp-call-to-actions .sp-cta .sp-cta-description h5 {
+  font-weight: 300;
+}
+
+.sp-call-to-actions .sp-cta .sp-cta-description h3 {
+  font-weight: 400;
+}
+
+#wrapper .banner img {
+  box-shadow: none;
+  width: 100%;
+  margin-bottom: none;
+  display: flex;
+}
+
+.row {
+  margin: 0;
+}
+
+.carousel-control .icon-next {
+  margin: 0px;
 }
