@@ -8,6 +8,11 @@ div.sp-container {
   flex-direction: column;
 }
 
+.dropdown-item {
+  font-weight: inherit;
+  color: inherit;
+}
+
 .sp-header {
   border-bottom: 1px solid #D3DCE6;
   padding: 16px 0px;
@@ -42,7 +47,7 @@ div.sp-container {
   font-size: 18px;
   color: #868E96;
   min-width: 376px;
-  height: 42px;
+  height: 46px;
 }
 
 .sp-header .sp-search-bar .sp-search-input input::-webkit-input-placeholder, {
@@ -53,7 +58,7 @@ div.sp-container {
 .sp-header .sp-search-bar .sp-search-button button {
   background: #9CBD00;
   border-radius: 4px;
-  font-weight: 300;
+  /*font-weight: 300;*/
   font-size: 18px;
   border: none;
   width: 157px;
@@ -76,11 +81,13 @@ div.sp-container {
   border: 1px solid #F27C2F;
   font-size: 18px;
   border-radius: 4px;
-  height: 44px;
+  height: 46px;
   width: 178px;
   justify-content: center;
   align-items: center;
 }
+
+
 
 .sp-header .sp-top-right .sp-smart-blog .sp-smart-blog-icon {
   margin-right: 19px;
@@ -97,6 +104,11 @@ div.sp-container {
   color: #F27C2F;
 }
 
+/*.sp-header .sp-top-right .sp-smart-blog:hover {
+  background: #F27C2F;
+  color: white;
+}
+*/
 .sp-header .sp-top-right .sp-account {
   margin-left: 29px;
   cursor: pointer;
@@ -136,6 +148,7 @@ div.sp-container {
 .sp-categories .sp-category {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   justify-content: center;
   flex-grow: 1;
   align-items: center;
@@ -177,9 +190,12 @@ div.sp-container {
 }
 
 .sp-categories .sp-category .sp-category-name {
-  font-size: 15px;
-  color: #343A40;
-  margin-top: 16px;
+    font-size: 15px;
+    color: #343A40;
+    margin-top: 16px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .sp-slider {
@@ -228,7 +244,7 @@ div.sp-container {
 }
 
 .sp-call-to-actions {
-  height: 71px;
+  height: 98px;
   background: #323D43;
   display: flex;
   flex-direction: row;
@@ -239,6 +255,7 @@ div.sp-container {
 .sp-call-to-actions .sp-cta {
   display: flex;
   flex-direction: row;
+  width: 25%;
   justify-content: center;
   flex-grow: 1;
   align-items: center;
@@ -274,7 +291,7 @@ div.sp-container {
   font-size: 18px;
   color: #FFFFFF;
   font-weight: 300;
-  width: 45%;
+  width: 70%;
   margin-left: 24px;
 }
 
@@ -432,11 +449,11 @@ div.sp-container {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  padding: 0px 32px;
 }
 
 .sp-category .sp-category-title {
   font-size: 32px;
+  height: 40px;
   color: #495057;
   text-transform: uppercase;
 }
@@ -465,27 +482,34 @@ div.sp-container {
   border: 1px solid #DEE2E6;
   border-radius: 4px;
   height: 320px;
-  min-width: 280px;
+  width: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .sp-category .sp-category-products .sp-category-product .sp-category-product-image img {
-  width: 112px;
+  /*width: 112px;*/
   height: 222px;
 }
 
 .sp-category .sp-category-products .sp-category-product .sp-category-product-name {
   font-size: 18px;
   margin: 16px 0px;
+  font-weight: 500;
   color: #868E96;
 }
 
 .sp-category .sp-category-products .sp-category-product .sp-category-product-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  width: 280px;
+}
+
+.sp-category .sp-category-products .sp-category-product .sp-category-product-info .sp-category-pricing {
+  display: flex;
+  flex-direction: row;
 }
 
 .sp-category .sp-category-products .sp-category-product .sp-category-product-info .sp-category-pricing .sp-category-pricing-discounted {
@@ -503,11 +527,17 @@ div.sp-container {
   border: 1px solid #E7A900;
   border-radius: 4px;
   width: 128px;
+  margin-top: 16px;
   height: 39px;
   font-size: 18px;
   color: #E7A900;
   background-color: white;
   cursor: pointer;
+}
+
+.sp-category .sp-category-products .sp-category-product .sp-category-product-info .sp-category-action {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sp-category .sp-category-products .sp-category-product .sp-category-product-info .sp-category-action button:hover {
@@ -527,13 +557,13 @@ div.sp-container {
 .sp-mailing .sp-mailing-title {
   font-size: 24px;
   color: #495057;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
 .sp-mailing .sp-mailing-description {
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-weight: 300;
   color: #ADB5BD;
 }
@@ -547,7 +577,7 @@ div.sp-container {
 .sp-mailing .sp-mailing-action .sp-mailing-input input{
   background: #FFFFFF;
   width: 306px;
-  height: 42px;
+  height: 46px;
   border: 1px solid #CED4DA;
   border-radius: 4px;
 }
@@ -833,4 +863,162 @@ div.sp-container {
 }
 .sp-footer .sp-footer-top .sp-footer-category .sp-footer-category-items .sp-footer-category-item a{
   color: #868E96;
+}
+
+#wrapper {
+  box-shadow: none; 
+  padding-top: 0px;
+}
+
+.carousel {
+    box-shadow: none;
+    margin-bottom: 0px;
+}
+
+.sp-slider .carousel-inner {
+  margin-bottom: 0px;
+  height: 526px;
+  width: 100%;
+}
+
+.sp-call-to-actions .sp-cta .sp-cta-description h5 {
+  font-weight: 300;
+}
+
+.sp-call-to-actions .sp-cta .sp-cta-description h3 {
+  font-weight: 400;
+}
+
+#wrapper .banner img {
+  box-shadow: none;
+  width: 100%;
+  margin-bottom: none;
+  display: flex;
+}
+
+.row {
+  margin: 0;
+}
+
+.carousel-control .icon-next {
+  margin: 0px;
+}
+
+#content > .sp-category {
+  padding: 32px 32px 0px 32px;
+} 
+
+@media(max-width: 480px) {
+  .sp-header-container {
+    flex-direction: column;
+    padding: 0px 18px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .sp-header .sp-search-bar {
+    margin-top: 8px;
+    align-self: center;
+  }
+  
+  .sp-header .sp-search-bar .sp-search-input input {
+      min-width: 240px;
+  }
+
+  .sp-header .sp-search-bar .sp-search-button button {
+    width: 50px;
+  }
+
+  .sp-header .sp-search-bar .sp-search-button button > span {
+    display: none;
+  }
+
+  .sp-header .sp-top-right {
+    margin-top: 16px;
+    align-self: center;
+  }
+
+  .sp-categories {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .sp-categories .sp-category {
+    flex-direction: row;
+    width: 100%;
+    border-right: none;
+    justify-content: flex-start;
+    padding: 16px 32px;
+    border-bottom: 1px solid #ADB5BD;
+  }
+
+   .sp-categories .sp-category > div:first-child {
+    min-width: 50px;
+   }
+
+  .sp-categories .sp-category .sp-category-name {
+    margin: 0px;
+    margin-left: 20px;
+    justify-content: flex-start;
+  }
+
+  .sp-categories .sp-category:last-child {
+    border-bottom: none;
+}
+
+.sp-call-to-actions {
+    flex-direction: column;
+    height: inherit;
+    padding: 0px;
+}
+
+.sp-call-to-actions .sp-cta {
+    width: 100%;
+    /*margin: 6px 36px;*/
+    border-right: none;
+    border-bottom: 1px solid #ADB5BD;
+}
+
+.sp-call-to-actions .sp-cta:last-child {
+    border-bottom: none;
+}
+
+.sp-footer .sp-footer-top {
+  flex-direction: column;
+}
+
+.sp-footer {
+  flex-direction: column;
+}
+
+.sp-mailing .sp-mailing-action .sp-mailing-input input {
+  width: 220px;
+}
+
+.sp-header .sp-top-right .sp-smart-blog {
+  width: inherit;
+  padding: 0px 8px;
+}
+
+.sp-header .sp-top-right .sp-smart-blog .sp-smart-blog-title {
+  /*display: none;*/
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.sp-header .sp-top-right .sp-smart-blog .sp-smart-blog-icon {
+  margin: 0px;
+}
+
+.sp-header .sp-top-right .sp-cart-container img {
+      margin-right: 3px;
+      width: 23px;
+      height: inherit;
+}
+
+.sp-header .sp-top-right .sp-cart-container {
+  width: 40px;
+  height: 40px;
+}
+
 }

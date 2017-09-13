@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- {*
+ 
 <div class="images-container">
   {block name='product_cover'}
     <div class="product-cover">
@@ -54,7 +54,8 @@
     </div>
   {/block}
 </div>
-*}
+
+{*
 <div class="sp-product-images">
   {foreach from=$product.images item=image}
     <div class="sp-product-images-image">        
@@ -73,5 +74,5 @@
 </div>
 <div class="sp-product-main-image">
   <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">  
-</div>
+</div>*}
 {hook h='displayAfterProductThumbs'}

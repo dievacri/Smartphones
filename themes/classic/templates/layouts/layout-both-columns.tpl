@@ -108,5 +108,4 @@
       {hook h='displayBeforeBodyClosingTag'}
     {/block}
   </body>
-
 </html>
