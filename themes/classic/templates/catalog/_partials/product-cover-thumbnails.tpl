@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- 
+ {*
 <div class="images-container">
   {block name='product_cover'}
     <div class="product-cover">
@@ -72,12 +72,10 @@
     </div>    
   {/foreach}
 </div>
-
-<div class="sp-product-main-image product-cover">
-  <img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">  
+<div class="sp-product-main-image product-cover"  id="image-block">
+  <img id="bigpic" class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">  
   <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
         <i class="material-icons zoom-in">&#xE8FF;</i>
       </div>
 </div>
-
 {hook h='displayAfterProductThumbs'}
