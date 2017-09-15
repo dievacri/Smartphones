@@ -51,6 +51,10 @@
 {/block}
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js" integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI=" crossorigin="anonymous"></script>
+  <!-- <script src="../themes/classic/assets/js/jquery-migrate-1.4.1.min.js"></script> -->
+  <script src="../themes/classic/assets/js/slick.min.js"></script>
+  <link href="../themes/classic/assets/css/font-awesome.min.css" rel="stylesheet"></script>
 
 {block name='stylesheets'}
   {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}

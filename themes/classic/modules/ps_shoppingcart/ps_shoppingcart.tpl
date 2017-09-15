@@ -31,6 +31,9 @@
      {if $cart.products_count > 0}
        </a>
      {/if}
+     <!-- {if $cart.products_count > 0}
+     	<p>{$cart.products_count} producto{if $cart.products_count > 1}s{/if} </p>
+     {/if} -->
    </div>
 </div>
 <!--

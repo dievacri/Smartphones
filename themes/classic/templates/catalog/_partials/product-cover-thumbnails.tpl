@@ -55,9 +55,10 @@
   {/block}
 </div>
 *}
-<div class="sp-product-images">
+
+<div class="sp-product-images js-qv-mask">
   {foreach from=$product.images item=image}
-    <div class="sp-product-images-image">        
+    <div class="sp-product-images-image js-qv-product-images">        
         <img
               class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if}"
               data-image-medium-src="{$image.bySize.medium_default.url}"
@@ -71,7 +72,10 @@
     </div>    
   {/foreach}
 </div>
-<div class="sp-product-main-image">
-  <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">  
+<div class="sp-product-main-image product-cover">
+  <img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">  
+  <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+        <i class="material-icons zoom-in">&#xE8FF;</i>
+      </div>
 </div>
 {hook h='displayAfterProductThumbs'}
